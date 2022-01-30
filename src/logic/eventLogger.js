@@ -2,6 +2,11 @@ const events = new Map(); // map event name to array of Date
 
 let firstDateGetTime;
 let onAddEvent;
+let onSetFirstDateGetTime;
+
+function setOnSetFirstDateGetTime(callback) {
+  onSetFirstDateGetTime = callback;
+}
 
 function setOnAddEventCallback(callback) {
   onAddEvent = callback;
@@ -9,6 +14,9 @@ function setOnAddEventCallback(callback) {
 
 function setFirstDateGetTime(date) {
   firstDateGetTime = date.getTime();
+  if (onSetFirstDateGetTime) {
+    onSetFirstDateGetTime();
+  }
 }
 
 function addEvent(eventName) {
@@ -28,7 +36,6 @@ function addEvent(eventName) {
   }
 }
 
-
 function getAllEvents() {
   // --- I do not that events will be changed without API.
   // --- However, Object.freeze of Map is not enough so i do not use it
@@ -42,4 +49,5 @@ export {
   setFirstDateGetTime,
   firstDateGetTime,
   setOnAddEventCallback,
+  setOnSetFirstDateGetTime,
 };

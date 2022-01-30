@@ -23,3 +23,6 @@ The design has two parts
 <li>npm i</li>
 <li>npm run dev</li>
 </ul>
+
+<h2>Todo</h2>
+call setFirstDateGetTime when event is outside window
