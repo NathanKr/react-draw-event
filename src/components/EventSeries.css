@@ -1,0 +1,14 @@
+.EventSeries {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.EventSeries > span {
+  flex: 1;
+  text-align: left;
+}
+
+.EventSeries > svg{
+    flex: 9;
+}
