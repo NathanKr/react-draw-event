@@ -3,6 +3,13 @@ Consider an events you write to the console.log and you want to see the event fl
 
 ![ScreenShot](/images/display.png)
 
+<h2>Usage</h2>
+```
+ <button onClick={() => eventLogger.addEvent("click1")}>Click1</button>
+ <button onClick={() => eventLogger.addEvent("click2")}>Click2</button>
+ <Events eventLogger={eventLogger} svgMaxTimeSec={15} />
+```
+
 <h2>Design</h2>
 The design has two parts
 <ul>
