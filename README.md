@@ -1,5 +1,5 @@
 <h2>Motivation</h2>
-Consider an events you write to the console.log and you want to see the event flow vs time. Using log its not convient. A much better way is to see it graphically - and this is what i have done.
+Consider an events you write to the console.log and you want to see the event flow vs time. Using a log file is not convient. A much better way is to see it graphically - and this is what i have done.
 
 ![ScreenShot](/images/display.png)
 
