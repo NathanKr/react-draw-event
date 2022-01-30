@@ -8,7 +8,8 @@ const Events = ({ eventLogger, svgMaxTimeSec }) => {
 
   const elemEvents = [];
   const events = eventLogger.getAllEvents();
-  const firstDateGetTime = eventLogger.getFirstDateGetTime();
+  const firstDateGetTime = eventLogger.firstDateGetTime;
+  ;
 
   events.forEach((value, key) => {
     const eventName = key;

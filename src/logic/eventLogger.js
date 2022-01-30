@@ -7,10 +7,6 @@ function setOnAddEventCallback(callback) {
   onAddEvent = callback;
 }
 
-function getFirstDateGetTime() {
-  return firstDateGetTime;
-}
-
 function setFirstDateGetTime(date) {
   firstDateGetTime = date.getTime();
 }
@@ -44,6 +40,6 @@ export {
   getAllEvents,
   addEvent,
   setFirstDateGetTime,
-  getFirstDateGetTime,
+  firstDateGetTime,
   setOnAddEventCallback,
 };
