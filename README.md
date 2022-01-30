@@ -4,6 +4,7 @@ Consider an events you write to the console.log and you want to see the event fl
 ![ScreenShot](/images/display.png)
 
 <h2>Usage</h2>
+
 ```
  <button onClick={() => eventLogger.addEvent("click1")}>Click1</button>
  <button onClick={() => eventLogger.addEvent("click2")}>Click2</button>
