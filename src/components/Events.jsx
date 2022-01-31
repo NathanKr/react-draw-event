@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Events = ({ eventLogger, svgMaxTimeSec }) => {
   const [eventsCount, setEventsCount] = useState(0);
-  const [windowsCount, setWindowsCount] = useState(0);
+  const [windowsCount, setWindowsCount] = useState(1);
 
   eventLogger.setOnAddEventCallback(() => setEventsCount((c) => c + 1));
   eventLogger.setOnSetFirstDateGetTime(() => setWindowsCount((c) => c + 1));
@@ -29,7 +29,8 @@ const Events = ({ eventLogger, svgMaxTimeSec }) => {
   return (
     <div>
       <p>
-        Time window : {svgMaxTimeSec} [s] , Evented add : {eventsCount} , Time windows : {windowsCount}
+        Time window span: {svgMaxTimeSec} [s] , Evented add : {eventsCount} ,
+        Time windows count : {windowsCount}
       </p>
       {elemEvents}
     </div>

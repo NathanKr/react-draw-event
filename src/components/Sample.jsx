@@ -1,7 +1,18 @@
+import {useState, useEffect } from "react";
 import * as eventLogger from "../logic/eventLogger";
 import Events from "./Events";
 
 const Sample = () => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    handle = setInterval(() => {
+      setCount((c) => c + 1);
+      eventLogger.addEvent("increment");
+    }, 5000);
+  }, []);
+
+  let handle;
+
   return (
     <div>
       <button onClick={() => eventLogger.setFirstDateGetTime(new Date())}>
