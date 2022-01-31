@@ -27,7 +27,7 @@ function addEvent(eventName) {
     setFirstDateGetTime(now);
   }
 
-  if (!events.get(eventName)) {
+  if (!events.has(eventName)) {
     events.set(eventName, []);
   }
   events.get(eventName).push(now);
