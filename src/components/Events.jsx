@@ -30,7 +30,7 @@ const Events = ({ eventLogger, svgMaxTimeSec }) => {
     <div>
       <p>
         Time window span: {svgMaxTimeSec} [s] , Evented add : {eventsCount} ,
-        Time windows count : {windowsCount}
+        Time window count : {eventLogger.firstDateGetTime ? windowsCount : null}
       </p>
       {elemEvents}
     </div>
