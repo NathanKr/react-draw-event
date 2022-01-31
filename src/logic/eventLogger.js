@@ -23,7 +23,8 @@ function addEvent(eventName) {
   const now = new Date();
 
   if (!firstDateGetTime) {
-    firstDateGetTime = now.getTime();
+    // firstDateGetTime = now;
+    setFirstDateGetTime(now);
   }
 
   if (!events.get(eventName)) {
